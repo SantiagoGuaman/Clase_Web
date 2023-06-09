@@ -1,0 +1,11 @@
+INSERT INTO `categoria` (`id_categoria`, `descripcion`) VALUES ('1', 'Deportes');
+INSERT INTO `categoria` (`id_categoria`, `descripcion`) VALUES ('2', 'Juguetería');
+INSERT INTO `categoria` (`id_categoria`, `descripcion`) VALUES ('3', 'Herramientas');
+INSERT INTO `categoria` (`id_categoria`, `descripcion`) VALUES ('4', 'Varios');
+INSERT INTO `categoria` (`id_categoria`, `descripcion`) VALUES ('5', 'Cocina');
+INSERT INTO `proveedor` (`id_proveedor`, `direccion`, `nombre`, `telefono`) VALUES ('1', 'Centro Histórico', 'MaxWell', '0953264578');
+INSERT INTO `proveedor` (`id_proveedor`, `direccion`, `nombre`, `telefono`) VALUES ('2', 'Villa nueva', 'Hamber', '097854136');
+INSERT INTO `proveedor` (`id_proveedor`, `direccion`, `nombre`, `telefono`) VALUES ('3', 'Gran Colombia', 'ButterFly', '0326598753');
+INSERT INTO `producto` (`precio`, `id_categoria`, `id_producto`, `id_proveedor`, `descripcion`) VALUES ('200', '1', '1', '1', 'Bicicleta Sudo 6 velocidades');
+INSERT INTO `producto` (`precio`, `id_categoria`, `id_producto`, `id_proveedor`, `descripcion`) VALUES ('20', '2', '2', '3', 'Coche escala 64');
+INSERT INTO `producto` (`precio`, `id_categoria`, `id_producto`, `id_proveedor`, `descripcion`) VALUES ('20', '5', '3', '2', 'Cuchillos de cerámica');
