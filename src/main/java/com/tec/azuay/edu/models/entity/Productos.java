@@ -28,12 +28,12 @@ public class Productos implements Serializable {
 	private String descripcion;
 	private Double precio;
 	
-	@ManyToOne ( cascade = CascadeType.ALL)
+	@ManyToOne
 	@JoinColumn(name = "id_categoria", referencedColumnName = "id_categoria")
     
 	private Categorias categoria;
 	
-	@ManyToOne ( cascade = CascadeType.ALL)
+	@ManyToOne
 	@JoinColumn(name = "id_proveedor", referencedColumnName = "id_proveedor")
 	private Proveedores proveedor;
 

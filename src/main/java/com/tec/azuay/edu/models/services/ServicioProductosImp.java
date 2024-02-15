@@ -6,14 +6,25 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.tec.azuay.edu.models.dao.ICategoriasDao;
 import com.tec.azuay.edu.models.dao.IProductosDao;
+import com.tec.azuay.edu.models.dao.IProveedoresDao;
+import com.tec.azuay.edu.models.entity.Categorias;
 import com.tec.azuay.edu.models.entity.Productos;
+import com.tec.azuay.edu.models.entity.Proveedores;
 
 @Service
 public class ServicioProductosImp implements IServicioProductos {
 	
 	@Autowired
 	private IProductosDao productoDao;
+	
+	@Autowired
+	private ICategoriasDao categoriaDao;
+	
+	@Autowired
+	private IProveedoresDao proveedorDao;
+	
 	
 	@Override
 	@Transactional (readOnly = true)
@@ -24,6 +35,13 @@ public class ServicioProductosImp implements IServicioProductos {
 	@Override
 	@Transactional
 	public Productos saveProducto(Productos productos) {
+		
+		Categorias cat = categoriaDao.findById(productos.getCategoria().getId_categoria()).orElse(null);
+		Proveedores prov = proveedorDao.findById(productos.getProveedor().getId_proveedor()).orElse(null);
+		
+		productos.setCategoria(cat);
+		productos.setProveedor(prov);
+		
 		return productoDao.save(productos);
 	}
 

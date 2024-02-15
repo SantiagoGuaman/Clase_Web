@@ -54,4 +54,18 @@ public class Proveedores implements Serializable {
 		this.telefono = telefono;
 	}
 	
+	public Proveedores() {
+		super();
+	}
+	public Proveedores(Long id_proveedor, String nombre, String direccion, String telefono) {
+		super();
+		this.id_proveedor = id_proveedor;
+		this.nombre = nombre;
+		this.direccion = direccion;
+		this.telefono = telefono;
+	}
+	public Proveedores(Long id_proveedor) {
+		this.id_proveedor = id_proveedor;
+	}
+
 }

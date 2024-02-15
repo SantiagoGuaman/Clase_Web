@@ -40,5 +40,20 @@ public class Categorias implements Serializable {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
+
+	
+	
+	public Categorias() {
+		
+	}
+
+	public Categorias(Long id_categoria) {
+		this.id_categoria = id_categoria;
+	}
+
+	public Categorias(Long id_categoria, String descripcion) {
+		this.id_categoria = id_categoria;
+		this.descripcion = descripcion;
+	}
 	
 }
